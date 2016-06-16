@@ -15,9 +15,9 @@ import android.widget.TextView;
 
 
 /**
- * Button(圆角Button带点击效果,正常Button带点击效果)
+ * CustomTextView
  *
- * @author gqiu
+ * @author Qiugang & jiaowenzheng
  */
 public class CustomTextView extends TextView {
 
@@ -42,8 +42,8 @@ public class CustomTextView extends TextView {
     private void setAttributeSet(Context context, AttributeSet attrs) {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.customTextView);
-        int solid = a.getColor(R.styleable.customTextView_textSolid, Color.TRANSPARENT);
-        int strokeColor = a.getColor(R.styleable.customTextView_textStroke, Color.TRANSPARENT);
+        int solid = a.getColor(R.styleable.customTextView_textSolidColor, Color.TRANSPARENT);
+        int strokeColor = a.getColor(R.styleable.customTextView_textStrokeColor, Color.TRANSPARENT);
         int radius = a.getDimensionPixelSize(R.styleable.customTextView_textRadius, 0);
         int leftTopRadius = a.getDimensionPixelSize(R.styleable.customTextView_textLeftTopRadius, 0);
         int leftBottomRadius = a.getDimensionPixelSize(R.styleable.customTextView_textLeftBottomRadius, 0);
@@ -97,6 +97,11 @@ public class CustomTextView extends TextView {
     }
 
 
+    /**
+     * 设置填充图片
+     *
+     * @param drawableId  drawable id
+     */
     public void setTextDrawable(int drawableId) {
         if (drawableId != 0) {
             Drawable textdrwable = getResources().getDrawable(drawableId);
@@ -111,16 +116,66 @@ public class CustomTextView extends TextView {
         }
     }
 
-
-    public void setSolid(int colorId) {
+    /**
+     *
+     * 设置填充颜色
+     *
+     * @param colorId   颜色id
+     */
+    public void setSolidColor(int colorId) {
         drawable.setColor(colorId);
         setBackgroundDrawable(drawable);
     }
 
-
+    /**
+     * 设置圆角弧度
+     *
+     * @param leftTopRadius         左上角弧度
+     * @param leftBottomRadius      左下角弧度
+     * @param rightTopRadius        右上角弧度
+     * @param rightBottomRadius     右下角弧度
+     */
     public void setRadius(int leftTopRadius, int leftBottomRadius, int rightTopRadius, int rightBottomRadius) {
         drawable.setCornerRadii(new float[]{leftTopRadius, leftTopRadius, rightTopRadius, rightTopRadius, rightBottomRadius, rightBottomRadius, leftBottomRadius, leftBottomRadius});
         setBackgroundDrawable(drawable);
+    }
+
+    /**
+     * 设置边框颜色及宽度
+     *
+     * @param strokeWidth      边框宽度
+     * @param colorId          边框颜色 id
+     */
+    public void setStrokeColorAndWidth(int strokeWidth,int colorId){
+        drawable.setStroke(strokeWidth, getResources().getColor(colorId));
+    }
+
+
+
+    /**
+     * 设置textView选中状态颜色
+     *
+     * @param normalTextColor     正常状态颜色
+     * @param selectedTextColor   按下状态颜色
+     */
+    public void setSelectedTextColor(int normalTextColor,int selectedTextColor) {
+
+        normalTextColor = getResources().getColor(normalTextColor);
+        selectedTextColor = getResources().getColor(selectedTextColor);
+
+        if (normalTextColor != 0 && selectedTextColor != 0) {
+            //设置state_selected状态时，和正常状态时文字的颜色
+            setClickable(true);
+            int[][] states = new int[3][1];
+            states[0] = new int[]{android.R.attr.state_selected};
+            states[1] = new int[]{android.R.attr.state_pressed};
+            states[2] = new int[]{};
+            ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedTextColor, selectedTextColor, normalTextColor});
+            setTextColor(textColorSelect);
+        }else{
+            setClickable(false);
+        }
+
     }
 
 }

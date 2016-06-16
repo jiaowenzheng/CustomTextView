@@ -10,26 +10,15 @@
     android:orientation="vertical"
     >
 
-    <!--<attr name="textSolid" format="color" />-->
-    <!--<attr name="textStroke" format="color" />-->
-    <!--<attr name="textRadius" format="dimension" />-->
-    <!--<attr name="textLeftTopRadius" format="dimension" />-->
-    <!--<attr name="textLeftBottomRadius" format="dimension" />-->
-    <!--<attr name="textRightTopRadius" format="dimension" />-->
-    <!--<attr name="textRightBottomRadius" format="dimension" />-->
-    <!--<attr name="textStrokeWidth" format="integer" />-->
-    <!--<attr name="textDrawable" format="reference" />-->
-    <!--<attr name="textNormalTextColor" format="color" />-->
-    <!--<attr name="textSelectedTextColor" format="color" />-->
-
     <com.library.CustomTextView
+        android:id="@+id/tv_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="圆角TextView"
         android:textColor="@color/color_ffffff"
         android:textSize="16sp"
         android:gravity="center"
-        app:textSolid="@color/color_303f9f"
+        app:textSolidColor="@color/color_303f9f"
         app:textRadius="@dimen/radius_10"
         />
 
@@ -41,7 +30,7 @@
         android:textSize="16sp"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:textSolid="@color/color_303f9f"
+        app:textSolidColor="@color/color_303f9f"
         app:textLeftTopRadius="@dimen/radius_10"
         app:textLeftBottomRadius="@dimen/radius_10"
         />
@@ -54,9 +43,9 @@
         android:textSize="16sp"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:textSolid="@color/color_303f9f"
+        app:textSolidColor="@color/color_303f9f"
         app:textRadius="@dimen/radius_10"
-        app:textStroke="@color/color_ff4081"
+        app:textStrokeColor="@color/color_ff4081"
         app:textStrokeWidth="2dp"
         />
 
@@ -68,7 +57,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         app:textRadius="@dimen/radius_45"
-        app:textSolid="@color/color_303f9f"
+        app:textSolidColor="@color/color_303f9f"
         app:textNormalTextColor="@color/color_ff0000"
         app:textSelectedTextColor="@color/color_00ff00"
         app:textStrokeWidth="2dp"
@@ -83,7 +72,7 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        app:textSolid="@color/color_303f9f"
+        app:textSolidColor="@color/color_303f9f"
         app:textRadius="@dimen/radius_45"
         app:textDrawable="@drawable/ic_launcher"
         />

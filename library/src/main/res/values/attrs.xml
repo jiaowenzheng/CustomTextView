@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="customTextView">
-        <attr name="textSolid" format="color" />
-        <attr name="textStroke" format="color" />
+        <attr name="textSolidColor" format="color" />
+        <attr name="textStrokeColor" format="color" />
         <attr name="textRadius" format="dimension" />
         <attr name="textLeftTopRadius" format="dimension" />
         <attr name="textLeftBottomRadius" format="dimension" />
