@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CustomTextView</string>
+
+    <string name="font_small">小</string>
+    <string name="font_normal">中</string>
+    <string name="font_big">大</string>
+    <string name="font_large">特大</string>
 </resources>

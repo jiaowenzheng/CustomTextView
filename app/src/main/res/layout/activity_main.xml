@@ -10,6 +10,47 @@
     android:orientation="vertical"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        >
+
+        <com.library.CustomTextView
+            android:id="@+id/bt_font_size_small"
+            style="@style/custom_button_font_setting_style"
+            android:text="@string/font_small"
+            app:textLeftTopRadius="5dp"
+            app:textLeftBottomRadius="5dp"
+            app:textNoRightStroke="true"
+            />
+
+        <com.library.CustomTextView
+            android:id="@+id/bt_font_size_normal"
+            style="@style/custom_button_font_setting_style"
+            android:text="@string/font_normal"
+            />
+
+        <com.library.CustomTextView
+            android:id="@+id/bt_font_size_big"
+            style="@style/custom_button_font_setting_style"
+            android:text="@string/font_big"
+            app:textNoLeftStroke="true"
+            />
+
+        <com.library.CustomTextView
+            android:id="@+id/bt_font_size_large"
+            style="@style/custom_button_font_setting_style"
+            android:text="@string/font_large"
+            app:textRightTopRadius="5dp"
+            app:textRightBottomRadius="5dp"
+            app:textNoLeftStroke="true"
+            />
+
+    </LinearLayout>
+
+
     <com.library.CustomTextView
         android:id="@+id/tv_1"
         android:layout_width="match_parent"
@@ -18,7 +59,7 @@
         android:textColor="@color/color_ffffff"
         android:textSize="16sp"
         android:gravity="center"
-        app:textSolidColor="@color/color_303f9f"
+        app:textNormalSolidColor="@color/color_303f9f"
         app:textRadius="@dimen/radius_10"
         />
 
@@ -30,7 +71,7 @@
         android:textSize="16sp"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:textSolidColor="@color/color_303f9f"
+        app:textNormalSolidColor="@color/color_303f9f"
         app:textLeftTopRadius="@dimen/radius_10"
         app:textLeftBottomRadius="@dimen/radius_10"
         />
@@ -43,7 +84,7 @@
         android:textSize="16sp"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:textSolidColor="@color/color_303f9f"
+        app:textNormalSolidColor="@color/color_303f9f"
         app:textRadius="@dimen/radius_10"
         app:textStrokeColor="@color/color_ff4081"
         app:textStrokeWidth="2dp"
@@ -57,7 +98,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         app:textRadius="@dimen/radius_45"
-        app:textSolidColor="@color/color_303f9f"
+        app:textNormalSolidColor="@color/color_303f9f"
         app:textNormalTextColor="@color/color_ff0000"
         app:textSelectedTextColor="@color/color_00ff00"
         app:textStrokeWidth="2dp"
@@ -72,7 +113,7 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        app:textSolidColor="@color/color_303f9f"
+        app:textNormalSolidColor="@color/color_303f9f"
         app:textRadius="@dimen/radius_45"
         app:textDrawable="@drawable/ic_launcher"
         />

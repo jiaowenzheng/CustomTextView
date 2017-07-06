@@ -8,9 +8,14 @@
 
 <br/>
 
+## 更新
+
+ * 新增 noLeftStroke、noTopStroke、noRightStroke、noBottomStroke 四个属性.
+ * 重新命名四个属性 normalSolidColor、pressedSolidColor、normalStrokeColor、pressedStrokeColor、roundLeftTopRadius、roundLeftBottomRadius、roundRightTopRadius、roundRightBottomRadius.
+ * 增加一个实现导航标签事例 用xml实现.
+        
 ## 属性
 
-          textSolidColor                                 背景填充色
           textStrokeColor                                边框颜色 
           textRadius                                     textView弧度
           textLeftTopRadius                              textView左上角弧度   
@@ -21,6 +26,13 @@
           textDrawable                                   图片
           textNormalTextColor                            正常状态文字颜色
           textSelectedTextColor                          按下状态文字颜色
+          textNoLeftStroke                               无左描边线
+          textNoRightStroke                              无右描边线
+          textNoTopStroke                                无上描边线
+          textNoBottomStroke                             无底部描边线
+          textPressedSolidColor                          按下填充色
+          textNormalSolidColor                           正常背景填充色
+          textIsSelected                                 是否支持button选中状态 与setSelected()配合使用
           
 ## 用法
  * xml中使用方法
